@@ -32,8 +32,8 @@ class TicTacToe
     @board.transpose.any? {|line| winner? line }
   end
 
-  def winner?(line)           
-    line.uniq.length == 1 && [X, O].include?(line.first)
+  def winner?(line)               
+    [[X]*3, [O]*3].include? line
   end
 
   def line_across?
