@@ -45,7 +45,7 @@ class TicTacToe
   end
 
   def next_move
-    (0..8).select {|i| winning_move?(i) }.first
+    (0..8).find {|i| winning_move?(i) }
   end
 
   def to_s
